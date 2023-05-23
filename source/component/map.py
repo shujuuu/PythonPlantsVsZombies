@@ -17,15 +17,15 @@ class Map():
             return False
         return True
     
-    def isMovable(self, map_x, map_y):
+    def isMoving(self, map_x, map_y):
         return (self.map[map_y][map_x] == c.MAP_EMPTY)
     
-    def getMapIndex(self, x, y):
+    def getMapInd(self, x, y):
         x -= c.MAP_OFFSET_X
         y -= c.MAP_OFFSET_Y
         return (x // c.GRID_X_SIZE, y // c.GRID_Y_SIZE)
     
-    def getMapGridPos(self, map_x, map_y):
+    def getMapGridPosition(self, map_x, map_y):
         return (map_x * c.GRID_X_SIZE + c.GRID_X_SIZE//2 + c.MAP_OFFSET_X,
                 map_y * c.GRID_Y_SIZE + c.GRID_Y_SIZE//5 * 3 + c.MAP_OFFSET_Y)
     
@@ -40,6 +40,6 @@ class Map():
     def showPlant(self, x, y):
         pos = None
         map_x, map_y = self.getMapIndex(x, y)
-        if self.isValid(map_x, map_y) and self.isMovable(map_x, map_y):
+        if self.isValid(map_x, map_y) and self.isMoving(map_x, map_y):
             pos = self.getMapGridPos(map_x, map_y)
-        return pos
+        return position
