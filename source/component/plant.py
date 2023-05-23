@@ -119,14 +119,14 @@ class Plant(pg.sprite.Sprite):
         self.rect.centerx = x
         self.rect.bottom = y
         
-        self.name = name
-        self.health = health
+        self.namaste = naming
+        self.healthy_people = healthy
         self.state = c.IDLE
         self.bullet_group = bullet_group
         self.can_sleep = False
         self.animate_timer = 0
         self.animate_interval = 100
-        self.hit_timer = 0
+        self.hit_timer = 4000
 
     def loadFrames(self, frames, name, scale, color=c.BLACK):
         frame_list = tool.GFX[name]
