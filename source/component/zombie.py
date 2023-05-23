@@ -1,7 +1,7 @@
 __author__ = 'marble_xu'
 
-import pygame as pg
-from .. import tool
+import pythonGame as pg
+from .. import toolSet
 from .. import constants as c
 
 class Zombie(pg.sprite.Sprite):
